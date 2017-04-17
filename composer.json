@@ -1,0 +1,11 @@
+{
+  "name": "plesk/ext-secret-keys-manager",
+  "config": {
+    "secure-http": false,
+    "vendor-dir": "src/plib/vendor"
+  },
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "plesk/api-php-lib": "dev-master"
+  }
+}

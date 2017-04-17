@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b1aa3fffc3039a01b3a5b745032fecf6",
+    "packages": [
+        {
+            "name": "plesk/api-php-lib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plesk/api-php-lib.git",
+                "reference": "5e8b83123c2e2d67ea2b8dcbc13158bff18271ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plesk/api-php-lib/zipball/5e8b83123c2e2d67ea2b8dcbc13158bff18271ea",
+                "reference": "5e8b83123c2e2d67ea2b8dcbc13158bff18271ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/dbunit": ">=1.2",
+                "phpunit/php-invoker": "*",
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PleskX\\": "src/PleskX/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexei Yuzhakov",
+                    "email": "sibprogrammer@gmail.com"
+                }
+            ],
+            "description": "PHP object-oriented library for Plesk XML-RPC API",
+            "time": "2017-01-05 17:48:06"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "plesk/api-php-lib": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.6 || ^7.0"
+    },
+    "platform-dev": []
+}
