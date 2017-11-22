@@ -1,4 +1,4 @@
-The extension allows to manage secret keys used for API authorization:
+This extension allows you to manage secret keys used for XML API authentication in the Plesk UI. It
 
-- retrieves and displays a list of existing keys
-- provides an ability to remove secret keys that are no longer needed
+- Retrieves and displays the list of existing keys.
+- Enables you to remove the selected secret keys.

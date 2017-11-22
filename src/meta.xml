@@ -7,7 +7,7 @@
   <category>developer</category>
   <category>security</category>
   <version>1.1.0</version>
-  <release>5</release>
+  <release>6</release>
   <vendor>Plesk</vendor>
   <url>https://github.com/plesk/ext-secret-keys-manager</url>
   <plesk_min_version>12.5</plesk_min_version>
