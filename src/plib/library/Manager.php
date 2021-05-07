@@ -16,7 +16,7 @@ class Modules_SecretKeysManager_Manager
         $data = [];
         foreach ($keys as $key) {
             $data[$key->key] = [
-                'key' => substr($key->key, 0, 13) . '...',
+                'key' => $key->key,
                 'ip_address' => $key->ipAddress,
                 'description' => $key->description,
             ];
