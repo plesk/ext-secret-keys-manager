@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Parallels IP Holdings GmbH.
+// Copyright 1999-2021. Parallels International GmbH.
 
 class Modules_SecretKeysManager_Manager
 {
@@ -50,6 +50,18 @@ class Modules_SecretKeysManager_Manager
         }
 
         return $statuses;
+    }
+
+    /**
+     * Create secret key
+     *
+     * @param string
+     * @return string
+     */
+    public function createSecretKey($ipAddress)
+    {
+        $client = new \PleskX\Api\InternalClient();
+        return $client->secretKey()->create($ipAddress);;
     }
 
 }
