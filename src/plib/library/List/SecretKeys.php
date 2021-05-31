@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Parallels IP Holdings GmbH.
+// Copyright 1999-2021. Parallels International GmbH.
 
 class Modules_SecretKeysManager_List_SecretKeys extends pm_View_List_Simple
 {
@@ -38,6 +38,11 @@ class Modules_SecretKeysManager_List_SecretKeys extends pm_View_List_Simple
 
         $this->setTools([
             [
+                'title' => $this->lmsg('buttonTitleCreate'),
+                'description' => $this->lmsg('buttonDescriptionCreate'),
+                'class' => 'sb-add-user',
+                'link' => $view->getHelper('baseUrl')->moduleUrl(['action' => 'create']),
+            ], [
                 'title' => $this->lmsg('buttonTitleRemove'),
                 'description' => $this->lmsg('buttonDescriptionRemove'),
                 'class' => 'sb-remove-selected',

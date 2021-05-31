@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Parallels IP Holdings GmbH.
+// Copyright 1999-2021. Parallels International GmbH.
 
 class IndexController extends pm_Controller_Action
 {
@@ -64,4 +64,27 @@ class IndexController extends pm_Controller_Action
         $this->_helper->json(['status' => 'success', 'statusMessages' => $statusMessages]);
     }
 
+    public function createAction()
+    {
+        $this->view->pageTitle = $this->lmsg('pageTitleCreateSecretKey');
+
+        $form = new pm_Form_Simple();
+        $form->addElement('text', 'ipAddress', [
+            'label' => $this->lmsg('ipAddressRestriction'),
+        ]);
+
+        $form->addControlButtons([
+            'cancelLink' => pm_Context::getBaseUrl(),
+        ]);
+
+        if ($this->getRequest()->isPost() && $form->isValid($this->getRequest()->getPost())) {
+            $keysManager = new Modules_SecretKeysManager_Manager();
+            $secretKey = $keysManager->createSecretKey($form->getValue('ipAddress'));
+
+            $this->_status->addMessage('info', $this->lmsg('createdSecretKey', ['key' => $secretKey]));
+            $this->_helper->json(['redirect' => pm_Context::getBaseUrl()]);
+        }
+
+        $this->view->form = $form;
+    }
 }

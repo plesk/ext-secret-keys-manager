@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Parallels IP Holdings GmbH.
+// Copyright 1999-2021. Parallels International GmbH.
 
 $messages = [
     'pageTitleSecretKeysList' => 'Keychain for API Secret Keys',
@@ -16,4 +16,9 @@ $messages = [
     'successMessageRemoveKeys' => 'Keys were successfully removed.',
     'successMessageRemoveKey' => 'The key with Id %%key%% has been removed.',
     'unknown' => 'unknown',
+    'pageTitleCreateSecretKey' => 'Adding New Secret Key',
+    'buttonTitleCreate' => 'Add Secret Key',
+    'buttonDescriptionCreate' => 'Create a secret key',
+    'createdSecretKey' => 'The secret key has been created: %%key%%',
+    'ipAddressRestriction' => 'IP address restriction',
 ];
