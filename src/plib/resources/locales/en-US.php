@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2021. Parallels International GmbH.
+// Copyright 1999-2021. Plesk International GmbH.
 
 $messages = [
     'pageTitleSecretKeysList' => 'Keychain for API Secret Keys',

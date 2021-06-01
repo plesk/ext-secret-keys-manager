@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Parallels IP Holdings GmbH.
+// Copyright 1999-2021. Plesk International GmbH.
 
 $moduleId = basename(dirname(__FILE__));
 
