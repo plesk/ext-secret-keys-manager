@@ -1,4 +1,4 @@
-# 1.2.0 (31 May 2021)
+# 2.0.0 (1 June 2021)
 
 * [+] Add an ability to create secret key.
 
