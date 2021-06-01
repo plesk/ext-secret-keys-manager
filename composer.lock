@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1aa3fffc3039a01b3a5b745032fecf6",
+    "content-hash": "588079d0de38de598624a1a99d9a22e9",
     "packages": [
         {
             "name": "plesk/api-php-lib",
@@ -50,10 +50,198 @@
                 }
             ],
             "description": "PHP object-oriented library for Plesk XML-RPC API",
-            "time": "2017-01-05 17:48:06"
+            "time": "2017-01-05T17:48:06+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "plesk/pm-api-stubs",
+            "version": "18.0.36",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plesk/pm-api-stubs.git",
+                "reference": "e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plesk/pm-api-stubs/zipball/e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a",
+                "reference": "e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a",
+                "shasum": ""
+            },
+            "require": {
+                "plesk/zf1": "1.12.17-patch4",
+                "psr/container": "^1.0",
+                "psr/log": "^1.1"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "^2.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "pm"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Plesk Extensions API PHP files stubs for IDE.",
+            "support": {
+                "issues": "https://github.com/plesk/pm-api-stubs/issues",
+                "source": "https://github.com/plesk/pm-api-stubs/tree/18.0.36"
+            },
+            "time": "2021-05-17T14:57:13+00:00"
+        },
+        {
+            "name": "plesk/zf1",
+            "version": "1.12.17-patch4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plesk/zf1.git",
+                "reference": "c9e09b1fbc0e18e302211bd90f72408d01dbb24a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plesk/zf1/zipball/c9e09b1fbc0e18e302211bd90f72408d01dbb24a",
+                "reference": "c9e09b1fbc0e18e302211bd90f72408d01dbb24a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "*",
+                "phpunit/phpunit": "^4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend_": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "library/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 (Plesk)",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "framework"
+            ],
+            "support": {
+                "source": "https://github.com/plesk/zf1/tree/1.12.17-patch4"
+            },
+            "time": "2019-03-28T08:53:54+00:00"
+        },
+        {
+            "name": "psr/container",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/1.1.1"
+            },
+            "time": "2021-03-05T17:36:06+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
@@ -64,5 +252,6 @@
     "platform": {
         "php": "^5.6 || ^7.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
