@@ -72,6 +72,9 @@ class IndexController extends pm_Controller_Action
         $form->addElement('text', 'ipAddress', [
             'label' => $this->lmsg('ipAddressRestriction'),
         ]);
+        $form->addElement('text', 'keyDescription', [
+            'label' => $this->lmsg('keyDescription'),
+        ]);
 
         $form->addControlButtons([
             'cancelLink' => pm_Context::getBaseUrl(),
@@ -79,7 +82,10 @@ class IndexController extends pm_Controller_Action
 
         if ($this->getRequest()->isPost() && $form->isValid($this->getRequest()->getPost())) {
             $keysManager = new Modules_SecretKeysManager_Manager();
-            $secretKey = $keysManager->createSecretKey($form->getValue('ipAddress'));
+            $secretKey = $keysManager->createSecretKey(
+                $form->getValue('ipAddress'),
+                $form->getValue('keyDescription'),
+            );
 
             $this->_status->addMessage('info', $this->lmsg('createdSecretKey', ['key' => $secretKey]));
             $this->_helper->json(['redirect' => pm_Context::getBaseUrl()]);

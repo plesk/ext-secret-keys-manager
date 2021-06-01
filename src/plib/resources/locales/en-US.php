@@ -21,4 +21,5 @@ $messages = [
     'buttonDescriptionCreate' => 'Create a secret key',
     'createdSecretKey' => 'The secret key has been created: %%key%%',
     'ipAddressRestriction' => 'IP address restriction',
+    'keyDescription' => 'Description'
 ];

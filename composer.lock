@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "588079d0de38de598624a1a99d9a22e9",
+    "content-hash": "db48ff25887a1547720d023c371f660f",
     "packages": [
         {
             "name": "plesk/api-php-lib",
@@ -12,31 +12,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plesk/api-php-lib.git",
-                "reference": "5e8b83123c2e2d67ea2b8dcbc13158bff18271ea"
+                "reference": "859c16fc33808b05fbb874edbc6444c2d7d9bf65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plesk/api-php-lib/zipball/5e8b83123c2e2d67ea2b8dcbc13158bff18271ea",
-                "reference": "5e8b83123c2e2d67ea2b8dcbc13158bff18271ea",
+                "url": "https://api.github.com/repos/plesk/api-php-lib/zipball/859c16fc33808b05fbb874edbc6444c2d7d9bf65",
+                "reference": "859c16fc33808b05fbb874edbc6444c2d7d9bf65",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.0"
+                "ext-curl": "*",
+                "ext-simplexml": "*",
+                "ext-xml": "*",
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
-                "phpunit/dbunit": ">=1.2",
-                "phpunit/php-invoker": "*",
-                "phpunit/phpunit": "5.5.*"
+                "phpunit/phpunit": "^9",
+                "spatie/phpunit-watcher": "^1.22"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PleskX\\": "src/PleskX/"
+                    "PleskX\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -47,10 +50,18 @@
                 {
                     "name": "Alexei Yuzhakov",
                     "email": "sibprogrammer@gmail.com"
+                },
+                {
+                    "name": "Plesk International GmbH.",
+                    "email": "plesk-dev-leads@plesk.com"
                 }
             ],
             "description": "PHP object-oriented library for Plesk XML-RPC API",
-            "time": "2017-01-05T17:48:06+00:00"
+            "support": {
+                "issues": "https://github.com/plesk/api-php-lib/issues",
+                "source": "https://github.com/plesk/api-php-lib/tree/master"
+            },
+            "time": "2021-03-28T10:39:44+00:00"
         }
     ],
     "packages-dev": [
@@ -250,7 +261,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.6 || ^7.0"
+        "php": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

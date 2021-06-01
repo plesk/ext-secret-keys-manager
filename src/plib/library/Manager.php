@@ -55,13 +55,18 @@ class Modules_SecretKeysManager_Manager
     /**
      * Create secret key
      *
-     * @param string
+     * @param string $ipAddress
+     * @param string $description
      * @return string
      */
-    public function createSecretKey($ipAddress)
+    public function createSecretKey($ipAddress, $description)
     {
+        if ('' === $ipAddress) {
+            $ipAddress = null;
+        }
+
         $client = new \PleskX\Api\InternalClient();
-        return $client->secretKey()->create($ipAddress);;
+        return $client->secretKey()->create($ipAddress, $description);
     }
 
 }
