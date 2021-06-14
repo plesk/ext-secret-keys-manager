@@ -71,6 +71,9 @@ class IndexController extends pm_Controller_Action
         $form = new pm_Form_Simple();
         $form->addElement('text', 'ipAddress', [
             'label' => $this->lmsg('ipAddressRestriction'),
+            'validators' => [
+                ['IpAddress', true],
+            ],
         ]);
         $form->addElement('text', 'keyDescription', [
             'label' => $this->lmsg('keyDescription'),
