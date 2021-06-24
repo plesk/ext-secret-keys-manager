@@ -1,3 +1,7 @@
+# 2.0.1 (25 June 2021)
+
+* [*] Fix the issue related to invalid IP address error handling (#7)
+
 # 2.0.0 (1 June 2021)
 
 * [+] Add an ability to create secret key.
