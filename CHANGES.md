@@ -1,3 +1,7 @@
+# 2.0.2 (10 July 2022)
+
+* [*] Fix the issue with IP address validation (#8)
+
 # 2.0.1 (25 June 2021)
 
 * [*] Fix the issue related to invalid IP address error handling (#7)
