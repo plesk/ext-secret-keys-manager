@@ -1,6 +1,8 @@
 <?php
 // Copyright 1999-2021. Plesk International GmbH.
 
+use Plesk\CommonPanel\Validate\IpAddress\IpAddress;
+
 class IndexController extends pm_Controller_Action
 {
     protected $_accessLevel = ['admin'];
@@ -72,7 +74,7 @@ class IndexController extends pm_Controller_Action
         $form->addElement('text', 'ipAddress', [
             'label' => $this->lmsg('ipAddressRestriction'),
             'validators' => [
-                ['IpAddress', true],
+                [new IpAddress(), true],
             ],
         ]);
         $form->addElement('text', 'keyDescription', [
