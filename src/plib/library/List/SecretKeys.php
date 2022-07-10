@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2021. Plesk International GmbH.
+// Copyright 1999-2022. Plesk International GmbH.
 
 class Modules_SecretKeysManager_List_SecretKeys extends pm_View_List_Simple
 {
