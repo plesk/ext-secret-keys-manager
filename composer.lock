@@ -4,24 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a63c265f9f997ab8989db75cbf1e528",
+    "content-hash": "0e7c4f76015def1808a207c12daf52cd",
     "packages": [
         {
             "name": "plesk/api-php-lib",
-            "version": "dev-master",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/plesk/api-php-lib.git",
-                "reference": "859c16fc33808b05fbb874edbc6444c2d7d9bf65"
+                "reference": "2ceece815106b8997319bcc62fe79d5fe095c65f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plesk/api-php-lib/zipball/859c16fc33808b05fbb874edbc6444c2d7d9bf65",
-                "reference": "859c16fc33808b05fbb874edbc6444c2d7d9bf65",
+                "url": "https://api.github.com/repos/plesk/api-php-lib/zipball/2ceece815106b8997319bcc62fe79d5fe095c65f",
+                "reference": "2ceece815106b8997319bcc62fe79d5fe095c65f",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-dom": "*",
                 "ext-simplexml": "*",
                 "ext-xml": "*",
                 "php": "^7.4 || ^8.0"
@@ -30,9 +31,8 @@
                 "phpunit/phpunit": "^9",
                 "spatie/phpunit-watcher": "^1.22",
                 "squizlabs/php_codesniffer": "^3.6",
-                "vimeo/psalm": "^4.10"
+                "vimeo/psalm": "^4.10 || ^5.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -54,43 +54,44 @@
                     "email": "sibprogrammer@gmail.com"
                 },
                 {
-                    "name": "Plesk International GmbH.",
+                    "name": "WebPros International GmbH.",
                     "email": "plesk-dev-leads@plesk.com"
                 }
             ],
             "description": "PHP object-oriented library for Plesk XML-RPC API",
             "support": {
                 "issues": "https://github.com/plesk/api-php-lib/issues",
-                "source": "https://github.com/plesk/api-php-lib/tree/master"
+                "source": "https://github.com/plesk/api-php-lib/tree/v2.2.1"
             },
-            "time": "2021-03-28T10:39:44+00:00"
+            "time": "2025-04-04T10:05:51+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "plesk/pm-api-stubs",
-            "version": "18.0.36",
+            "version": "18.0.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/plesk/pm-api-stubs.git",
-                "reference": "e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a"
+                "reference": "23386e7b3d8a5189c72f66c642b207bb6263a398"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plesk/pm-api-stubs/zipball/e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a",
-                "reference": "e508cb2bff3dbc07a5d496c8e2ca2df89caeeb7a",
+                "url": "https://api.github.com/repos/plesk/pm-api-stubs/zipball/23386e7b3d8a5189c72f66c642b207bb6263a398",
+                "reference": "23386e7b3d8a5189c72f66c642b207bb6263a398",
                 "shasum": ""
             },
             "require": {
-                "plesk/zf1": "1.12.17-patch4",
+                "plesk/zf1": "1.12.17-patch22",
                 "psr/container": "^1.0",
-                "psr/log": "^1.1"
-            },
-            "require-dev": {
-                "phpdocumentor/phpdocumentor": "^2.9"
+                "psr/http-factory": "^1.0",
+                "psr/http-server-middleware": "^1.0"
             },
             "type": "library",
             "autoload": {
+                "psr-4": {
+                    "Plesk\\SDK\\": "SDK/"
+                },
                 "classmap": [
                     "pm"
                 ]
@@ -102,26 +103,26 @@
             "description": "Plesk Extensions API PHP files stubs for IDE.",
             "support": {
                 "issues": "https://github.com/plesk/pm-api-stubs/issues",
-                "source": "https://github.com/plesk/pm-api-stubs/tree/18.0.36"
+                "source": "https://github.com/plesk/pm-api-stubs/tree/18.0.63"
             },
-            "time": "2021-05-17T14:57:13+00:00"
+            "time": "2025-03-19T15:05:00+00:00"
         },
         {
             "name": "plesk/zf1",
-            "version": "1.12.17-patch4",
+            "version": "1.12.17-patch22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/plesk/zf1.git",
-                "reference": "c9e09b1fbc0e18e302211bd90f72408d01dbb24a"
+                "reference": "eb7da487c7b6f656e7b75d774bc7361d70904cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plesk/zf1/zipball/c9e09b1fbc0e18e302211bd90f72408d01dbb24a",
-                "reference": "c9e09b1fbc0e18e302211bd90f72408d01dbb24a",
+                "url": "https://api.github.com/repos/plesk/zf1/zipball/eb7da487c7b6f656e7b75d774bc7361d70904cc3",
+                "reference": "eb7da487c7b6f656e7b75d774bc7361d70904cc3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.1"
             },
             "require-dev": {
                 "phpunit/dbunit": "*",
@@ -152,26 +153,26 @@
                 "framework"
             ],
             "support": {
-                "source": "https://github.com/plesk/zf1/tree/1.12.17-patch4"
+                "source": "https://github.com/plesk/zf1/tree/1.12.17-patch22"
             },
-            "time": "2019-03-28T08:53:54+00:00"
+            "time": "2025-03-19T13:32:52+00:00"
         },
         {
             "name": "psr/container",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
-                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/513e0666f7216c7459170d56df27dfcefe1689ea",
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": ">=7.4.0"
             },
             "type": "library",
             "autoload": {
@@ -200,36 +201,37 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/1.1.1"
+                "source": "https://github.com/php-fig/container/tree/1.1.2"
             },
-            "time": "2021-03-05T17:36:06+00:00"
+            "time": "2021-11-05T16:50:12+00:00"
         },
         {
-            "name": "psr/log",
-            "version": "1.1.4",
+            "name": "psr/http-factory",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.1",
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
+                    "Psr\\Http\\Message\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -242,29 +244,197 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
-                "log",
+                "factory",
+                "http",
+                "message",
                 "psr",
-                "psr-3"
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.4"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2021-05-03T11:20:27+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/2.0"
+            },
+            "time": "2023-04-04T09:54:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-server-handler/tree/1.0.2"
+            },
+            "time": "2023-04-10T20:06:20+00:00"
+        },
+        {
+            "name": "psr/http-server-middleware",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0",
+                "psr/http-server-handler": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/http-server-middleware/issues",
+                "source": "https://github.com/php-fig/http-server-middleware/tree/1.0.2"
+            },
+            "time": "2023-04-11T06:14:47+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "plesk/api-php-lib": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4 | ^8.0 | ^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

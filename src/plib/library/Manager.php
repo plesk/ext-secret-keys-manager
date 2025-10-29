@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2023. Plesk International GmbH.
+// Copyright 1999-2025. Plesk International GmbH.
 
 class Modules_SecretKeysManager_Manager
 {

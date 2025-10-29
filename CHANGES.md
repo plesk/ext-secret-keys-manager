@@ -1,3 +1,7 @@
+# 2.0.3 (28 October 2025)
+
+* [*] Updated dependencies (EXTPLESK-9702)
+
 # 2.0.2 (10 July 2022)
 
 * [*] Fix the issue with IP address validation (#8)

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 1999-2023. Plesk International GmbH. -->
+<!-- Copyright 1999-2025. Plesk International GmbH. -->
 <module>
   <id>secret-keys-manager</id>
   <name>Keychain for API Secret Keys</name>
   <description>The extension provides an ability to manage secret keys.</description>
   <category>developer</category>
   <category>security</category>
-  <version>2.0.2</version>
+  <version>2.0.3</version>
   <release>1</release>
   <vendor>Plesk</vendor>
   <url>https://github.com/plesk/ext-secret-keys-manager</url>
