@@ -1,11 +1,20 @@
 <?php
-// Copyright 1999-2025. Plesk International GmbH.
+// Copyright 1999-2026. WebPros International GmbH.
 
 use Plesk\CommonPanel\Validate\IpAddress\IpAddress;
 
 class IndexController extends pm_Controller_Action
 {
     protected $_accessLevel = ['admin'];
+
+    protected function _checkAccessLevel()
+    {
+        parent::_checkAccessLevel();
+
+        if (!Modules_SecretKeysManager_Visibility::isAccessAllowed()) {
+            throw new \pm_Exception($this->lmsg('restrictedMode.accessDeniedMessage'));
+        }
+    }
 
     public function indexAction()
     {
