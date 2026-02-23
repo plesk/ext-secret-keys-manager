@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2025. Plesk International GmbH.
+// Copyright 1999-2026. WebPros International GmbH.
 
 $messages = [
     'pageTitleSecretKeysList' => 'Keychain for API Secret Keys',
@@ -21,5 +21,9 @@ $messages = [
     'buttonDescriptionCreate' => 'Create a secret key',
     'createdSecretKey' => 'The secret key has been created: %%key%%',
     'ipAddressRestriction' => 'IP address restriction',
-    'keyDescription' => 'Description'
+    'keyDescription' => 'Description',
+    'restrictedMode' => [
+        'accessPermission' => 'Keychain for API Secret Keys',
+        'accessDeniedMessage' => 'Access denied by Restricted Mode',
+    ],
 ];

@@ -1,3 +1,7 @@
+# 2.1.0 (unreleased)
+
+* [*] Introduced permission for Restricted Mode. (EXTPLESK-9623) 
+
 # 2.0.3 (28 October 2025)
 
 * [*] Updated dependencies (EXTPLESK-9702)

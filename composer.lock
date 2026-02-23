@@ -69,16 +69,16 @@
     "packages-dev": [
         {
             "name": "plesk/pm-api-stubs",
-            "version": "18.0.63",
+            "version": "18.0.76",
             "source": {
                 "type": "git",
                 "url": "https://github.com/plesk/pm-api-stubs.git",
-                "reference": "23386e7b3d8a5189c72f66c642b207bb6263a398"
+                "reference": "7c43ed16c57db1bad6a51058d80200c37588c8be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plesk/pm-api-stubs/zipball/23386e7b3d8a5189c72f66c642b207bb6263a398",
-                "reference": "23386e7b3d8a5189c72f66c642b207bb6263a398",
+                "url": "https://api.github.com/repos/plesk/pm-api-stubs/zipball/7c43ed16c57db1bad6a51058d80200c37588c8be",
+                "reference": "7c43ed16c57db1bad6a51058d80200c37588c8be",
                 "shasum": ""
             },
             "require": {
@@ -103,9 +103,9 @@
             "description": "Plesk Extensions API PHP files stubs for IDE.",
             "support": {
                 "issues": "https://github.com/plesk/pm-api-stubs/issues",
-                "source": "https://github.com/plesk/pm-api-stubs/tree/18.0.63"
+                "source": "https://github.com/plesk/pm-api-stubs/tree/18.0.76"
             },
-            "time": "2025-03-19T15:05:00+00:00"
+            "time": "2026-02-18T13:03:53+00:00"
         },
         {
             "name": "plesk/zf1",
@@ -429,12 +429,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4 | ^8.0 | ^8.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
