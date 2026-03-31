@@ -1,4 +1,4 @@
-# 2.1.0 (unreleased)
+# 2.1.0 (31 March 2026)
 
 * [*] Introduced permission for Restricted Mode. (EXTPLESK-9623) 
 
