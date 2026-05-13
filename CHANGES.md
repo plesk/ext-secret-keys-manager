@@ -1,3 +1,8 @@
+# 2.1.1 (unreleased)
+
+* [+] Added ability to add keys for customer and resellers (EXTPLESK-13708)
+* [+] Added information about key owner (EXTPLESK-13708)
+
 # 2.1.0 (31 March 2026)
 
 * [*] Introduced permission for Restricted Mode. (EXTPLESK-9623) 

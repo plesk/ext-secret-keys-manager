@@ -3,10 +3,12 @@
 
 $messages = [
     'pageTitleSecretKeysList' => 'Keychain for API Secret Keys',
-    'pageDescriptionSecretKeysList' => 'This is where you manage your secret keys (alternative way of authentication for XML API). You can remove secret keys that are no longer needed.',
+    'pageDescriptionSecretKeysList' => 'This is where you manage your secret keys (alternative way of authentication for XML API and REST API). You can remove secret keys that are no longer needed.',
     'columnTitleKey' => 'Key Id',
     'columnTitleIpAddress' => 'IP address',
     'columnTitleDescription' => 'Description',
+    'columnTitleOwner' => 'Owner',
+    'columnTitleOwnerType' => 'Type',
     'buttonTitleRemove' => 'Remove',
     'buttonDescriptionRemove' => 'Remove selected secret keys.',
     'confirmMessageToRemoveKeys' => 'Do you really want to remove the selected keys?',
@@ -22,6 +24,8 @@ $messages = [
     'createdSecretKey' => 'The secret key has been created: %%key%%',
     'ipAddressRestriction' => 'IP address restriction',
     'keyDescription' => 'Description',
+    'keyOwner' => 'Key Owner',
+    'ownerAdmin' => 'Administrator (admin)',
     'restrictedMode' => [
         'accessPermission' => 'Keychain for API Secret Keys',
         'accessDeniedMessage' => 'Access denied by Restricted Mode',

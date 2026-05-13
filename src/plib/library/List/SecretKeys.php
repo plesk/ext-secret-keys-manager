@@ -24,6 +24,17 @@ class Modules_SecretKeysManager_List_SecretKeys extends pm_View_List_Simple
                 'searchable' => true,
                 'sortable' => true,
             ],
+            'owner_type' => [
+                'title' => $this->lmsg('columnTitleOwnerType'),
+                'searchable' => true,
+                'sortable' => true,
+            ],
+            'owner' => [
+                'title' => $this->lmsg('columnTitleOwner'),
+                'searchable' => true,
+                'sortable' => true,
+                'noEscape' => true,
+            ],
             'ip_address' => [
                 'title' => $this->lmsg('columnTitleIpAddress'),
                 'searchable' => true,
