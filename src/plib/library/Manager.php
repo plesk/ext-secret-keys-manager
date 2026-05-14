@@ -13,16 +13,55 @@ class Modules_SecretKeysManager_Manager
         $client = new \PleskX\Api\InternalClient();
         $keys = $client->secretKey()->getAll();
 
+        $clientsCache = [];
         $data = [];
         foreach ($keys as $key) {
+            $login = $key->login;
+            if (!isset($clientsCache[$login])) {
+                $clientsCache[$login] = $this->resolveClient($login);
+            }
+
             $data[$key->key] = [
                 'key' => $key->key,
                 'ip_address' => $key->ipAddress,
                 'description' => $key->description,
+                'owner' => $clientsCache[$login]['owner'],
+                'owner_type' => $clientsCache[$login]['owner_type'],
             ];
         }
 
         return $data;
+    }
+
+    /**
+     * @return array{owner: string, owner_type: string}
+     */
+    private function resolveClient(string $login): array
+    {
+        try {
+            $client = \pm_Client::getByLogin($login);
+            $pname = htmlspecialchars($client->getProperty('pname'), ENT_QUOTES);
+            $type = $client->getProperty('type');
+            $id = (int) $client->getId();
+
+            if ($client->isClient()) {
+                $owner = '<a href="/admin/customer/domains/id/' . $id . '">' . $pname . '</a>';
+            } elseif ($client->isReseller()) {
+                $owner = '<a href="/admin/reseller/domains/id/' . $id . '">' . $pname . '</a>';
+            } else {
+                $owner = $pname;
+            }
+
+            return [
+                'owner' => $owner,
+                'owner_type' => $type,
+            ];
+        } catch (\Exception $e) {
+            return [
+                'owner' => htmlspecialchars($login, ENT_QUOTES),
+                'owner_type' => '',
+            ];
+        }
     }
 
     /**
@@ -57,16 +96,46 @@ class Modules_SecretKeysManager_Manager
      *
      * @param string $ipAddress
      * @param string $description
+     * @param string $login
      * @return string
      */
-    public function createSecretKey($ipAddress, $description)
+    public function createSecretKey($ipAddress, $description, $login = '')
     {
-        if ('' === $ipAddress) {
-            $ipAddress = null;
+        $client = new \PleskX\Api\InternalClient();
+        $packet = $client->getPacket();
+        $createTag = $packet->addChild('secret_key')->addChild('create');
+        $createTag->addChild('ip_address', $ipAddress);
+
+        if ('' !== $description) {
+            $createTag->addChild('description', $description);
+        }
+        if ('' !== $login) {
+            $createTag->addChild('login', $login);
         }
 
-        $client = new \PleskX\Api\InternalClient();
-        return $client->secretKey()->create($ipAddress, $description);
+        $response = $client->request($packet);
+        return (string) $response->key;
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function getAccountOptions(): array
+    {
+        $options = ['' => \pm_Locale::lmsg('ownerAdmin')];
+
+        foreach (\pm_Client::getAll() as $client) {
+            if ($client->isAdmin()) {
+                continue;
+            }
+            $options[$client->getLogin()] = sprintf(
+                '%s (%s)',
+                $client->getProperty('pname'),
+                $client->getProperty('type'),
+            );
+        }
+
+        return $options;
     }
 
 }

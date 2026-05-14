@@ -79,7 +79,20 @@ class IndexController extends pm_Controller_Action
     {
         $this->view->pageTitle = $this->lmsg('pageTitleCreateSecretKey');
 
+        $keysManager = new Modules_SecretKeysManager_Manager();
+        $accountOptions = $keysManager->getAccountOptions();
+
         $form = new pm_Form_Simple();
+        $form->addElement('select', 'owner', [
+            'label' => $this->lmsg('keyOwner'),
+            'multiOptions' => $accountOptions,
+            'validators' => [
+                new Zend_Validate_InArray([
+                    'haystack' => array_keys($accountOptions),
+                    'strict' => true,
+                ]),
+            ],
+        ]);
         $form->addElement('text', 'ipAddress', [
             'label' => $this->lmsg('ipAddressRestriction'),
             'validators' => [
@@ -95,10 +108,10 @@ class IndexController extends pm_Controller_Action
         ]);
 
         if ($this->getRequest()->isPost() && $form->isValid($this->getRequest()->getPost())) {
-            $keysManager = new Modules_SecretKeysManager_Manager();
             $secretKey = $keysManager->createSecretKey(
                 $form->getValue('ipAddress'),
                 $form->getValue('keyDescription'),
+                $form->getValue('owner'),
             );
 
             $this->_status->addMessage('info', $this->lmsg('createdSecretKey', ['key' => $secretKey]));
