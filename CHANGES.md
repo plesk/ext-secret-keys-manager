@@ -1,11 +1,11 @@
-# 2.1.1 (unreleased)
+# 2.1.1 (26 May 2026)
 
 * [+] Added ability to add keys for customer and resellers (EXTPLESK-13708)
 * [+] Added information about key owner (EXTPLESK-13708)
 
 # 2.1.0 (31 March 2026)
 
-* [*] Introduced permission for Restricted Mode. (EXTPLESK-9623) 
+* [*] Introduced permission for Restricted Mode. (EXTPLESK-9623)
 
 # 2.0.3 (28 October 2025)
 
@@ -26,6 +26,3 @@
 # 1.1.1 (12 May 2021)
 
 * [-] The extension interface now shows key IDs instead of key values. To reflect this change, we also renamed the "Key" tab to "Key ID". (EXTPLESK-2334)
-
-      
-
