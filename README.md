@@ -4,4 +4,4 @@
 
 The extension retrieves and displays a list of secret keys, and also provides an ability to remove secret keys that are no longer needed.
 
-![Screenshot](https://raw.githubusercontent.com/plesk/ext-secret-keys-manager/master/src/_meta/screenshots/1.png)
+<img src="src/_meta/screenshots/1.png" alt="List of secret keys shown in the extension" width="600">
