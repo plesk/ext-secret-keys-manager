@@ -1,3 +1,8 @@
+# 2.3.0 (19 August 2026)
+
+* [*] The keys are now sorted in reverse chronological order for a better UX
+* [*] The minimal supported Plesk version was increased to 18.0.69
+
 # 2.1.1 (26 May 2026)
 
 * [+] Added ability to add keys for customer and resellers (EXTPLESK-13708)
