@@ -9,6 +9,21 @@
     "plesk/api-php-lib": "^1.1 || ^2.0"
   },
   "require-dev": {
+    "phpunit/phpunit": "^13.3",
     "plesk/pm-api-stubs": "^18.0"
+  },
+  "autoload-dev": {
+    "classmap": [
+      "src/plib/library/",
+      "src/plib/hooks/"
+    ],
+    "psr-4": {
+      "Tests\\": [
+        "tests/unit/"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
   }
 }

@@ -3,6 +3,35 @@
 
 class Modules_SecretKeysManager_Manager
 {
+    private ?\PleskX\Api\InternalClient $apiClient;
+
+    public function __construct(?\PleskX\Api\InternalClient $apiClient = null)
+    {
+        $this->apiClient = $apiClient;
+    }
+
+    private function getApiClient(): \PleskX\Api\InternalClient
+    {
+        if (null === $this->apiClient) {
+            $this->apiClient = new \PleskX\Api\InternalClient();
+        }
+
+        return $this->apiClient;
+    }
+
+    protected function getClientByLogin(string $login): \pm_Client
+    {
+        return \pm_Client::getByLogin($login);
+    }
+
+    /**
+     * @return \pm_Client[]
+     */
+    protected function getClients(): array
+    {
+        return \pm_Client::getAll();
+    }
+
     /**
      * Retrieve and return all secret keys
      *
@@ -10,8 +39,7 @@ class Modules_SecretKeysManager_Manager
      */
     public function getAllSecretKeys()
     {
-        $client = new \PleskX\Api\InternalClient();
-        $keys = $client->secretKey()->getAll();
+        $keys = $this->getApiClient()->secretKey()->getAll();
 
         $clientsCache = [];
         $data = [];
@@ -39,7 +67,7 @@ class Modules_SecretKeysManager_Manager
     private function resolveClient(string $login): array
     {
         try {
-            $client = \pm_Client::getByLogin($login);
+            $client = $this->getClientByLogin($login);
             $pname = htmlspecialchars($client->getProperty('pname'), ENT_QUOTES);
             $type = $client->getProperty('type');
             $id = (int) $client->getId();
@@ -77,11 +105,10 @@ class Modules_SecretKeysManager_Manager
             throw new pm_Exception(pm_Locale::lmsg('errorMessageMissingKeys'));
         }
 
-        $client = new \PleskX\Api\InternalClient();
         $statuses = [];
 
         foreach ($keys as $keyId) {
-            $result = $client->secretKey()->delete($keyId);
+            $result = $this->getApiClient()->secretKey()->delete($keyId);
             $statuses[] = [
                 'status' => $result ? 'ok' : 'fail',
                 'key' => $keyId,
@@ -101,7 +128,7 @@ class Modules_SecretKeysManager_Manager
      */
     public function createSecretKey($ipAddress, $description, $login = '')
     {
-        $client = new \PleskX\Api\InternalClient();
+        $client = $this->getApiClient();
         $packet = $client->getPacket();
         $createTag = $packet->addChild('secret_key')->addChild('create');
         $createTag->addChild('ip_address', $ipAddress);
@@ -124,7 +151,7 @@ class Modules_SecretKeysManager_Manager
     {
         $options = ['' => \pm_Locale::lmsg('ownerAdmin')];
 
-        foreach (\pm_Client::getAll() as $client) {
+        foreach ($this->getClients() as $client) {
             if ($client->isAdmin()) {
                 continue;
             }

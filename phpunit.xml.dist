@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 1999-2026. WebPros International GmbH. -->
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="src/plib/vendor/phpunit/phpunit/phpunit.xsd"
+  bootstrap="tests/unit/bootstrap.php"
+  colors="true"
+>
+  <testsuites>
+    <testsuite name="default">
+      <directory>tests/unit</directory>
+    </testsuite>
+  </testsuites>
+  <source>
+    <include>
+      <directory suffix=".php">src/plib</directory>
+    </include>
+    <exclude>
+      <directory>src/plib/vendor</directory>
+      <directory>src/plib/resources</directory>
+    </exclude>
+  </source>
+</phpunit>

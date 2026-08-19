@@ -1,2 +1,6 @@
 /.env
 /src/plib/vendor
+/phpunit.xml
+/.phpunit.result.cache
+/.phpunit.coverage/
+/.phpunit.coverage.*
