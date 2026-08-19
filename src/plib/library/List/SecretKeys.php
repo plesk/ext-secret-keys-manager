@@ -13,7 +13,7 @@ class Modules_SecretKeysManager_List_SecretKeys extends pm_View_List_Simple
     public function __construct(Zend_View $view, Zend_Controller_Request_Abstract $request, array $options = [])
     {
         parent::__construct($view, $request, [
-            'defaultSortField' => 'ip_address',
+            'defaultSortField' => 'key',
             'defaultSortDirection' => pm_View_List_Simple::SORT_DIR_DOWN,
         ]);
 
