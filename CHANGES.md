@@ -1,5 +1,6 @@
-# 2.3.0 (19 August 2026)
+# 2.3.0 (20 August 2026)
 
+* [*] The created secret key is now highlighted in the success message for better visibility
 * [*] The keys are now sorted in reverse chronological order for a better UX
 * [*] The minimal supported Plesk version was increased to 18.0.69
 
