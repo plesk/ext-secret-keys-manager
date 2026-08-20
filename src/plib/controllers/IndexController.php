@@ -114,7 +114,11 @@ class IndexController extends pm_Controller_Action
                 $form->getValue('owner'),
             );
 
-            $this->_status->addMessage('info', $this->lmsg('createdSecretKey', ['key' => $secretKey]));
+            $this->_status->addMessage(
+                'info',
+                $this->lmsg('createdSecretKey', ['key' => htmlspecialchars($secretKey)]),
+                true
+            );
             $this->_helper->json(['redirect' => pm_Context::getBaseUrl()]);
         }
 
