@@ -35,6 +35,10 @@ class IndexController extends pm_Controller_Action
 
     public function removeSecretKeysAction()
     {
+        if (!$this->getRequest()->isPost()) {
+            throw new \pm_Exception($this->lmsg('errorMessageBadRequest'), 400);
+        }
+
         $statusMessages = [];
 
         $keysManager = new Modules_SecretKeysManager_Manager();
