@@ -15,6 +15,7 @@ $messages = [
     'errorMessageMissingKeys' => 'Secret keys available for removal are missing.',
     'errorMessageRemoveKeysFail' => 'Unable to remove keys.',
     'errorMessageRemoveKeyFail' => 'Unable to remove key with Id %%key%%.',
+    'errorMessageBadRequest' => 'The request is invalid.',
     'successMessageRemoveKeys' => 'Keys were successfully removed.',
     'successMessageRemoveKey' => 'The key with Id %%key%% has been removed.',
     'unknown' => 'unknown',

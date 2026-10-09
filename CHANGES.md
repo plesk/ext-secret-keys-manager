@@ -1,3 +1,7 @@
+# 2.3.1 (13 October 2026)
+
+* [*] Security improvements.
+
 # 2.3.0 (20 August 2026)
 
 * [*] The created secret key is now highlighted in the success message for better visibility
